@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu de Arte Moderna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MuseuDeArte</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#visit">Visite-nos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="startQuiz()">Quiz</a></li>
+                    <li class="nav-item">
+                        <button id="exitBtn" class="btn btn-outline-warning nav-link">SAIR</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    <section class="hero d-flex justify-content-center align-items-center text-center text-white" style="background-image: url('renascimento-michelangelo-artes.webp');">
+        <div class="container">
+            <h1 class="display-4">Bem-vindo ao Museu de Arte Moderna</h1>
+            <p class="lead">Explore as melhores obras de arte contemporânea de todo o mundo.</p>
+            <a href="#gallery" class="btn btn-warning btn-lg">Explore Agora</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h2>Sobre o Museu</h2>
+            <p class="lead">Nosso museu exibe uma variedade de obras de arte moderna, desde obras-primas digitais até esculturas inovadoras. Acreditamos em ultrapassar os limites da criatividade e redefinir o que a arte pode ser.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Galeria de Arte</h2>
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="art-school-of-athens-raphael-italian-painter-fresco-159862.jpeg" class="d-block w-100" alt="Obra de Arte 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="csm_Renascimento__1._A_Ultima_Ceia_4125f8890a.jpg" class="d-block w-100" alt="Obra de Arte 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="Estudo descobre a pose certa para parecer sensual em fotos.jpeg" class="d-block w-100" alt="Obra de Arte 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Galeria de Arte</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card" onclick="showCuriosity('Sabia que este quadro levou 5 anos para ser concluído?')">
+                    <img src="Estudo descobre a pose certa para parecer sensual em fotos.jpeg" class="card-img-top" alt="O Nascimento de Vênus">
+                    <div class="card-body">
+                      <h5 class="card-title">O Nascimento de Vênus</h5>
+                      <p class="card-text">O Nascimento de Vênus é uma pintura de Sandro Botticelli...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" onclick="showCuriosity('A Última Ceia foi pintada diretamente na parede de um convento em Milão.')">
+                    <img src="csm_Renascimento__1._A_Ultima_Ceia_4125f8890a.jpg" class="card-img-top" alt="A Última Ceia">
+                    <div class="card-body">
+                      <h5 class="card-title">A Última Ceia</h5>
+                      <p class="card-text">A obra retrata o momento crucial da última refeição de Jesus com seus apóstolos...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" onclick="showCuriosity('A Criação de Adão faz parte do teto da Capela Sistina e foi pintada entre 1508 e 1512.')">
+                    <img src="KOIKJIKI90O.png" class="card-img-top" alt="A Criação de Adão">
+                    <div class="card-body">
+                      <h5 class="card-title">A Criação de Adão</h5>
+                      <p class="card-text">A Criação de Adão é um afresco de Michelangelo Buonarroti...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" onclick="showCuriosity('Van Gogh pintou A Noite Estrelada enquanto estava internado em um hospital psiquiátrico.')">
+                    <img src="makeup.jpeg" class="card-img-top" alt="A Noite Estrelada">
+                    <div class="card-body">
+                      <h5 class="card-title">A Noite Estrelada</h5>
+                      <p class="card-text">A Noite Estrelada é uma pintura de Vincent van Gogh de 1889...</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="visit" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Visite-nos</h2>
+            <p class="lead">Estamos localizados no coração da cidade (Pameirinha), abertos a visitantes todos os dias, das 10h às 20h.</p>
+            <a href="#contact" class="btn btn-dark btn-lg">Planeje Sua Visita</a>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h2>Entre em Contato</h2>
+            <p>Email: viniciusfernando1306@gmail.com | Telefone: (42) 99134-7998</p>
+            <ul class="list-unstyled d-flex justify-content-center">
+                <li><a href="#" class="text-white mx-3"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"></a></li>
+                <li><a href="#" class="text-white mx-3"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a></li>
+                <li><a href="#" class="text-white mx-3"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="curiosityModal" tabindex="-1" aria-labelledby="curiosityModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="curiosityModalLabel">Curiosidade</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="curiosityContent"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function showCuriosity(curiosity) {
+        document.getElementById('curiosityContent').innerText = curiosity;
+        var curiosityModal = new bootstrap.Modal(document.getElementById('curiosityModal'));
+        curiosityModal.show();
+      }
+
+      document.getElementById('exitBtn').addEventListener('click', function() {
+        const userConfirmed = confirm('Obrigado por nos visitar! Deseja realmente sair do site?');
+        if (userConfirmed) {
+            window.location.href = 'https://www.google.com';
+        }
+      });
+    </script>
+<script>
+  function startQuiz() {
+    // Array de perguntas e respostas corretas
+    const questions = [
+        {
+            question: '1. Quem pintou "O Nascimento de Vênus"? (a) Sandro Botticelli (b) Michelangelo',
+            correctAnswer: 'a'
+        },
+        {
+            question: '2. Em que ano Vincent van Gogh pintou "A Noite Estrelada"? (a) 1889 (b) 1870',
+            correctAnswer: 'a'
+        },
+        {
+            question: '3. Qual é o tema da pintura "A Última Ceia"? (a) A ceia final de Jesus com seus apóstolos (b) A crucificação de Jesus',
+            correctAnswer: 'a'
+        }
+    ];
+
+    let score = 0;
+
+    // Iterar sobre cada pergunta
+    for (let i = 0; i < questions.length; i++) {
+        let userAnswer = prompt(questions[i].question).toLowerCase();
+
+        // Verificar se a resposta está correta
+        if (userAnswer === questions[i].correctAnswer) {
+            score++;
+        }
+    }
+
+    // Exibir a pontuação final
+    alert(`Sua pontuação é: ${score}/${questions.length}`);
+  }
+</script>
+
+</body>
+</html>

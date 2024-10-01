@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Museu de Arte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="js.js"></script>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Quiz do Museu de Arte</h1>
+        
+        <!-- Botão para abrir o pop-up -->
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quizModal">
+                Iniciar Quiz
+            </button>
+        </div>
+
+        <!-- Modal do Quiz -->
+        <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="quizModalLabel">Quiz do Museu de Arte</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="quizForm">
+                            <div class="mb-3">
+                                <label class="form-label"><strong>1. Quem pintou "O Nascimento de Vênus"?</strong></label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" value="Sandro Botticelli">
+                                    <label class="form-check-label">Sandro Botticelli</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q1" value="Michelangelo">
+                                    <label class="form-check-label">Michelangelo</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label"><strong>2. Em que ano Vincent van Gogh pintou "A Noite Estrelada"?</strong></label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" value="1889">
+                                    <label class="form-check-label">1889</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q2" value="1870">
+                                    <label class="form-check-label">1870</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label"><strong>3. Qual é o tema da pintura "A Última Ceia"?</strong></label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" value="A ceia final de Jesus com seus apóstolos">
+                                    <label class="form-check-label">A ceia final de Jesus com seus apóstolos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q3" value="A crucificação de Jesus">
+                                    <label class="form-check-label">A crucificação de Jesus</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary" onclick="submitQuiz()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultado do Quiz -->
+        <div id="result" class="mt-4" style="display: none;">
+            <h2 class="text-center">Sua pontuação: <span id="score"></span>/3</h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

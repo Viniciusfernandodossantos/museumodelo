@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <form method="POST" class="formLogin" onsubmit="validateLogin(event)">
+            <h1>Login do ADM</h1>
+            <p>Digite os seus dados de acesso no campo abaixo.
+                (usuário: vini,
+                senha: 12345)
+            
+            </p>
+            <label for="user">Usuário</label>
+            <input type="text" id="user" placeholder="Digite seu usuário" required autofocus />
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required />
+            <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmakeameme.org%2Fmeme%2Faquela-cara-de-80b34c372f&psig=AOvVaw3SFmpmkqInvVn9xQWU5g-I&ust=1727371331568000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCYvu3N3ogDFQAAAAAdAAAAABAE">Esqueci minha senha</a>
+            <input type="submit" value="Acessar" class="btn" />
+        </form>
+    </div>
+</body>
+nction startQuiz() {
+    // Array de perguntas e respostas corretas
+    const questions = [
+        {
+            question: '1. Quem pintou "O Nascimento de Vênus"? (a) Sandro Botticelli (b) Michelangelo',
+            correctAnswer: 'a'
+        },
+        {
+            question: '2. Em que ano Vincent van Gogh pintou "A Noite Estrelada"? (a) 1889 (b) 1870',
+            correctAnswer: 'a'
+        },
+        {
+            question: '3. Qual é o tema da pintura "A Última Ceia"? (a) A ceia final de Jesus com seus apóstolos (b) A crucificação de Jesus',
+            correctAnswer: 'a'
+        }
+    ];
+
+    let score = 0;
+
+    // Iterar sobre cada pergunta
+    for (let i = 0; i < questions.length; i++) {
+        let userAnswer = prompt(questions[i].question).toLowerCase();
+
+        // Verificar se a resposta está correta
+        if (userAnswer === questions[i].correctAnswer) {
+            score++;
+        }
+    }
+
+    // Exibir a pontuação final
+    alert(`Sua pontuação é: ${score}/${questions.length}`);
+}
+
+</html>
